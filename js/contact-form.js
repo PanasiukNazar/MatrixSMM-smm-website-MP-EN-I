@@ -1,12 +1,12 @@
-const submit = document.querySelector('#submit')
+const submit = document.querySelector('#submit');
 
 submit.addEventListener('click', () => {
-    event.preventDefault()
-})
+    event.preventDefault();
+});
 
 function sendForm() {
     const newPath = 'thanks.html';
-    
+
     // Get the input value
     const emailInput = document.getElementById('email').value;
 
@@ -18,6 +18,7 @@ function sendForm() {
         document.getElementById('result').textContent = '';
         window.location.href = newPath;
     } else {
-        document.getElementById('result').textContent = 'Invalid e-mail. Please enter a valid e-mail address.';
+        document.getElementById('result').textContent =
+            'Неверный адрес электронной почты. Пожалуйста, введите действительный адрес электронной почты.';
     }
 }
